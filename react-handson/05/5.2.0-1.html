@@ -76,16 +76,15 @@
       }
 
       // Menuコンポーネント
-      function Menu(props) {
+      function Menu({ title, recipes }) {
         return (
           <article>
             <header>
-              <h1>{props.title}</h1>
+              <h1>{title}</h1>
             </header>
             <div classNAme="recipes">
-              {props.recipes.map((recipe, i) => (
-                <Recipe key={i} {...recipe} steps={recipe.steps} />
-                // <Recipe key={i} name={recipe.name} ingredients={recipe.ingredients} steps={recipe.steps} />
+              {recipes.map((recipe, i) => (
+                <Recipe key={i} {...recipe} />
               ))}
             </div>
           </article>
