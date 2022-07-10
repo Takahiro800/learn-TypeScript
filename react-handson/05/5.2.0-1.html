@@ -84,7 +84,8 @@
             </header>
             <div classNAme="recipes">
               {props.recipes.map((recipe, i) => (
-                <Recipe key={i} name={recipe.name} ingredients={recipe.ingredients} steps={recipe.steps} />
+                <Recipe key={i} {...recipe} steps={recipe.steps} />
+                // <Recipe key={i} name={recipe.name} ingredients={recipe.ingredients} steps={recipe.steps} />
               ))}
             </div>
           </article>
