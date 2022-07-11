@@ -17,5 +17,14 @@ yarnの場合
 - `yarn init -y`
 - `yarn add react react-dom serve`
 
+
+##### ビルド環境の構築(p.99)
+`npm install --save-dev webpack webpack-cli`
+`yarn add webpack webpack-cli --dev`
+
+モジュールに分割されたアプリケーションを単一のファイルに結合するためには、webpackに対して結合手順を教える必要がある。そのために、プロジェクトごとに設定ファイルを記述する必要があります。
+- `webpack.config.js`という名前でプロジェクトのルートディレクトリに配置する必要がある
+
+
 参考記事
 [JavaScript｜パッケージマネージャー「Yarn」の使い方 - わくわくBank](https://www.wakuwakubank.com/posts/307-javascript-yarn/)
