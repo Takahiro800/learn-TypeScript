@@ -89,6 +89,7 @@ Reactのコンポーネントが持つデータはプロパティだけではな
 `yarn add @babel/preset-env @babel/preset-react --dev`
 
 Babelの設定ファイルを作成
+`touch .babelrc`
 
 参考記事
 [JavaScript｜パッケージマネージャー「Yarn」の使い方 - わくわくBank](https://www.wakuwakubank.com/posts/307-javascript-yarn/)
