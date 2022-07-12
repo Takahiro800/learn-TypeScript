@@ -25,6 +25,33 @@ yarnの場合
 モジュールに分割されたアプリケーションを単一のファイルに結合するためには、webpackに対して結合手順を教える必要がある。そのために、プロジェクトごとに設定ファイルを記述する必要があります。
 - `webpack.config.js`という名前でプロジェクトのルートディレクトリに配置する必要がある
 
+##### webpack.config.jsの作成
+1. エントリファイルを指定
+2. 最終的なバンドルの出力先を指定
+
+##### JSXをコンパイルするためにBabelをインストールする
+```js
+//   webpack.config.jsに追記
+  module: {
+    rules: [{ test: /\.js%/, exclude: /node_modules/, loader: 'babel-loader' }],
+  },
+```
+1. babel-loaderの設定値のみを記述している
+2. testには、処理対象となるファイルと正規表現で指定。全ての.js
+3. excludeで処理の対象外を指定。`node_module`配下は無視
+
+##### Babelの振る舞いを変えるために設定ファイルを用意・.bablerc
+- `yarn add @babel/preset-env @babel/preset-react --dev`
+ES.nextの構文とJSXを、ブラウザが解釈できるコードに変換する
+```
+{
+  "presets": [
+    "@babel/preset-env",
+    "@babel/preset-react"
+  ]
+}
+```
+
 
 参考記事
 [JavaScript｜パッケージマネージャー「Yarn」の使い方 - わくわくBank](https://www.wakuwakubank.com/posts/307-javascript-yarn/)
