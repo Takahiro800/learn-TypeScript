@@ -52,6 +52,16 @@ ES.nextの構文とJSXを、ブラウザが解釈できるコードに変換す�
 }
 ```
 
+### 5.3.3
+依存モジュールを単一のファイルにビルドすることによるデメリットもある。
+- ブラウザでのデバッグが困難になる
+これを解決するのが**ソースマップ**
+
+webpack.config.jsに以下を追加
+```js
+  devtool: 'source-map', // ソースマップ
+```
+
 
 参考記事
 [JavaScript｜パッケージマネージャー「Yarn」の使い方 - わくわくBank](https://www.wakuwakubank.com/posts/307-javascript-yarn/)
