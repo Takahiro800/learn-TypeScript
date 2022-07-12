@@ -62,6 +62,33 @@ webpack.config.jsに以下を追加
   devtool: 'source-map', // ソースマップ
 ```
 
+# 6. ステート
+Reactのコンポーネントが持つデータはプロパティだけではなく、ステートもある
+プロパティ
+- Read-Only コンポーネントが描画されると変更されない
+
+ステート
+- コンポーネントの描画後に変更されるデータをステートと呼ぶ
+
+## React Appを一から作ってみる
+1. ディレクトリ作成
+2. 複数のコンポーネントに分割して異なるファイルに記述する
+3. アプリケーションをwebpackでビルドできるようになる
+
+- yarn init -y
+- yarn add react react-dom --serve
+
+ファイルを作成
+`yarn add webpack webpack-cli --dev`
+
+`webpack.config.js`を作成
+
+`yarn add babel-loader @babel/core --dev`
+
+プリセットをインストール
+`yarn add @babel/preset-env @babel/preset-react --dev`
+
+Babelの設定ファイルを作成
 
 参考記事
 [JavaScript｜パッケージマネージャー「Yarn」の使い方 - わくわくBank](https://www.wakuwakubank.com/posts/307-javascript-yarn/)
