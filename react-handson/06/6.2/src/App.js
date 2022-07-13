@@ -8,7 +8,7 @@ export default function App() {
     <ColorList
       colors={colors}
       onRateColor={(id, rating) => {
-        const newColors = colors.map((color) => (color.id === id ? { ...colors, rating } : color));
+        const newColors = colors.map((color) => (color.id === id ? { ...color, rating } : color));
         setColors(newColors);
       }}
       onRemoveColor={(id) => {
