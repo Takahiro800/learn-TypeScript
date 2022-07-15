@@ -91,5 +91,29 @@ Reactのコンポーネントが持つデータはプロパティだけではな
 Babelの設定ファイルを作成
 `touch .babelrc`
 
+### 6.3.2 制御されたコンポーネント
+- onSubmitプロパティを追加
+- Click時の挙動は `const submit` で定義
+```js
+    <form onSubmit={submit}>
+      <input
+        value={title}
+        onChange={(event) => setTitle(event.target.value)}
+        type="text"
+        placeholder="color title ..."
+        required
+      />
+      <input value={color} onChange={(event) => setColor(event.target.value)} type="color" required />
+      <button>ADD</button>
+    </form>
+```
+
+### 6.3.3 カスタムフック
+-　上記のように、inputタグごとに
+```js
+	<input value={} onChange={}>
+```
+は不適切。『重複したコードは関数として切り出して抽象化すべきである』
+
 参考記事
 [JavaScript｜パッケージマネージャー「Yarn」の使い方 - わくわくBank](https://www.wakuwakubank.com/posts/307-javascript-yarn/)
