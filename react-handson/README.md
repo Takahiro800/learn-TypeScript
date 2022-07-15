@@ -115,5 +115,23 @@ Babelの設定ファイルを作成
 ```
 は不適切。『重複したコードは関数として切り出して抽象化すべきである』
 
+### 6.4 Reactコンテキスト
+- 中間のコンポーネントに都度コードを書いていくのは手間
+- データの受け渡しを、定義する箇所と利用するコンポーネントのみに記述する技術がコンテキスト
+
+定義する側
+- `Context.Provider`で定義
+```js
+export const ColorContext = createContext();
+
+render(
+  <ColorContext.Provider value={{ colors }}>
+    <App />
+  </ColorContext.Provider>,
+  document.getElementById('root')
+);
+
+```
+
 参考記事
 [JavaScript｜パッケージマネージャー「Yarn」の使い方 - わくわくBank](https://www.wakuwakubank.com/posts/307-javascript-yarn/)
