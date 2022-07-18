@@ -1,10 +1,12 @@
 import React, { useEffect, useLayoutEffect, useState } from 'react';
+import useMousePosition from './useMousePosition';
 import useWindowSize from './useWindowSize';
 
 export default function App() {
   const [val, set] = useState('');
   const [phrase, setPhrase] = useState('example phrase');
   const [width, height] = useWindowSize();
+  const [x, y] = useMousePosition();
 
   const createPhrase = () => {
     setPhrase(val);
@@ -39,6 +41,8 @@ export default function App() {
       <button onClick={createPhrase}>send</button>
       <p>{width}</p>
       <p>{height}</p>
+      <p>{x}</p>
+      <p>{y}</p>
     </>
   );
 }
