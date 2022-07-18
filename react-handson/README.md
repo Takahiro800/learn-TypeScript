@@ -140,5 +140,8 @@ render(
 **カスタムプロバイダー**
 ステートを保持するコンポーネントでコンテキストプロバイダーを描画すること
 
+# 07 フック
+画面描画後に実行したい場合、`useEffect`フックを使う
+
 参考記事
 [JavaScript｜パッケージマネージャー「Yarn」の使い方 - わくわくBank](https://www.wakuwakubank.com/posts/307-javascript-yarn/)
