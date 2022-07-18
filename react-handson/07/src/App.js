@@ -11,11 +11,21 @@ export default function App() {
 
   useEffect(() => {
     console.log(`typing "${val}"`);
-  });
+  }, [val]);
 
   useEffect(() => {
     console.log(`saved phrase: "${phrase}"`);
-  });
+  }, [phrase]);
+
+  // 依存配列に複数の値を含ませることもできる
+  useEffect(() => {
+    console.log('either val or phrase has changed');
+  }, [val, phrase]);
+
+  // 空にすることで初回描画時のみに実行する
+  useEffect(() => {
+    console.log('only once after initial render');
+  }, []);
 
   return (
     <>
