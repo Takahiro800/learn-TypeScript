@@ -156,6 +156,9 @@ render(
 4. useEffectで設定した副作用関数が呼び出される
 
 
+### 7.3 useReducer
+現在のステート値を受け取って新しいステート値を返す関数のことを `リデューサー`と呼ぶ
+
 
 参考記事
 [JavaScript｜パッケージマネージャー「Yarn」の使い方 - わくわくBank](https://www.wakuwakubank.com/posts/307-javascript-yarn/)
