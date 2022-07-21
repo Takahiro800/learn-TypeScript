@@ -166,6 +166,38 @@ useReducerについて
 1. 現在のステート値
 2. 入力値
 
+### 7.3.1 useReducerを使った複雑なステート管理
+- 誤った実装（adminカラムだけでなく、他のカラムは空に）
+```js
+	<button
+	onClick={() => {
+		setUser({ admin: true });
+	}}
+	>
+```
+
+- スプレッド構文を用いて更新する
+```js
+	<button
+	onClick={() => {
+		setUser({ ...user, admin: true });
+	}}
+	>
+```
+これだと、`setUser`を使っている箇所全てにおいてスプレッド構文を追記する必要がある。
+
+
+元のステート値を活用して更新するので、リデューサーを活用するのが良い
+```js
+  const [user, setUser] = useReducer((user, newDetails) => ({ ...user, ...newDetails }));
+        <button
+        onClick={() => {
+          setUser({ admin: true });
+        }}
+      >
+```
+
+
 
 
 参考記事
