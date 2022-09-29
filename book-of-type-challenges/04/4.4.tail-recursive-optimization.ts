@@ -61,3 +61,8 @@ type Y_33 = G_33<
     0
   ]
 >;
+
+/** 練習問題 */
+type One<N extends number, R extends any[] = []> = R['length'] extends N ? R : One<N, [1, ...R]>;
+// type X = One<3>; X = [1,1,1]
+// type Y = One<0>; Y = []
