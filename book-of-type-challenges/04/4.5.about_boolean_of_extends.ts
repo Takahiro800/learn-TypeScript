@@ -84,3 +84,26 @@ type F_39_3 = <T>(x: T) => T extends number ? 1 : 0;
 type G_39_3 = <T>(x: T) => T extends number ? 2 : 0;
 type X_39_3 = F_39_3 extends G_39_3 ? true : false;
 // X_39_3: false;
+
+/** function型 Fの戻り値の型がfunction型Gの戻り値の型のサブタイプであり、引数の型が一致する場合、FはGのサブタイプであると言える
+ * このような性質を共変性という
+ */
+type X_40 = (() => 42) extends () => number ? true : false;
+// X_40: true;
+
+type Y_40 = (() => number) extends () => 42 ? true : false;
+// Y_40: false;
+
+/**
+ * funciton型Fの各引数の型がfunction型Gの各引数の型のスーパータイプであり戻り値の型が同一である場合、、FはGのサブタイプとなる.
+ * このような性質を反変性という
+ */
+type X_40_1 = ((x: number) => void) extends (x: 42) => void ? true : false;
+// X_40_1: true;
+
+type Y_40_1 = ((x: 42) => void) extends (x: number) => void ? true : false;
+// Y_40_1: false;
+
+/** 引数がany型の関数については反変性の例外となる */
+type X_40_2 = ((x: number) => void) extends (x: any) => void ? true : false;
+// X_40_2: true;
