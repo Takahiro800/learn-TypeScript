@@ -107,3 +107,6 @@ type Y_40_1 = ((x: 42) => void) extends (x: number) => void ? true : false;
 /** 引数がany型の関数については反変性の例外となる */
 type X_40_2 = ((x: number) => void) extends (x: any) => void ? true : false;
 // X_40_2: true;
+
+/** function型Fの戻り値の型が function型Gの戻り値の型のサブタイプ、かつ、Fの各引数の型がGの各引数の型のスーパータイプの場合もFはGのサブタイプとなる */
+type X_41 = ((x: number) => 42) extends (x: 42) => number ? true : false;
