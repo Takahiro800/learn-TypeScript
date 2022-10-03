@@ -110,3 +110,6 @@ type X_40_2 = ((x: number) => void) extends (x: any) => void ? true : false;
 
 /** function型Fの戻り値の型が function型Gの戻り値の型のサブタイプ、かつ、Fの各引数の型がGの各引数の型のスーパータイプの場合もFはGのサブタイプとなる */
 type X_41 = ((x: number) => 42) extends (x: 42) => number ? true : false;
+
+/** 戻り値がvoid型のfunction　Gについて、Gと引数の型が同一である（戻り値の型は任意である）関数Fのスーパータイプとなる */
+type X_41_2 = (() => number) extends () => void ? true : false;
