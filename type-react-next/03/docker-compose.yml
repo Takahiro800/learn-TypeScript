@@ -9,5 +9,5 @@ services:
       - ./:/usr/src/app
     command: sh -c 'cd react-sample && yarn start'
     ports:
-      - 8000:3000
+      - 3000:3000
     tty: true
