@@ -31,7 +31,8 @@ const DoubleButton = React.memo((props: ButtonProps) => {
   return <button onClick={onClick}>Double</button>;
 });
 
-export const Parent = () => {
+// export const Parent = () => {
+export const UseCallbackSample = () => {
   const [count, setCount] = useState(0);
 
   const decrement = () => {
