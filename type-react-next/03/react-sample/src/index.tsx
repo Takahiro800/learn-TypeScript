@@ -3,12 +3,11 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import Hello from './components/Hello';
-import { Parent } from './components/Parent';
+import { Parent } from './components/UseCallbackSample';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
   <React.StrictMode>
-    {/* <Hello></Hello> */}
     <Parent />
   </React.StrictMode>
 );
