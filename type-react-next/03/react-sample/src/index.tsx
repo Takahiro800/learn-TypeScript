@@ -5,12 +5,14 @@ import reportWebVitals from './reportWebVitals';
 import Hello from './components/Hello';
 import { UseCallbackSample } from './components/UseCallbackSample';
 import { UseMemoSample } from './components/UseMemoSample';
+import { Clock } from './components/Clock';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
   <React.StrictMode>
     {/* <UseCallbackSample /> */}
-    <UseMemoSample />
+    {/* <UseMemoSample /> */}
+    <Clock />
   </React.StrictMode>
 );
 
