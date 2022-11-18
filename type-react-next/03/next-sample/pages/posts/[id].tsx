@@ -52,8 +52,12 @@ export const getStaticPaths: GetStaticPaths = async () => {
   return { paths, fallback: false };
 };
 
+type PathsProps = {
+  params: PostProps;
+};
+
 // getStaticPaths実行後にそれぞれのパスについてgetStaticPropsが実行される
-export const getStaticProps: GetStaticProps<PostProps> = async (context) => {
+export const getStaticProps: GetStaticProps<PostProps> = async (context: PathsProps) => {
   const id = Array.isArray(context.params['id']) ? context.params['id'][0] : context.params['id'];
 
   return {
