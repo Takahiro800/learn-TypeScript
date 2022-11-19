@@ -9,8 +9,8 @@ const variants = {
   },
 
   success: {
-    color: '#ffffff',
-    backgroundColor: '#5AB203',
+    color: '#000000',
+    backgroundColor: '#00ffff',
     border: 'none',
   },
   tarnsparent: {
@@ -31,15 +31,15 @@ export const StyledButton = styled.button<StyledButtonProps>`
 
     // cssを使い、複数のスタイルを返す
     return css`
-      color" ${style.color};
+      color: ${style.color};
       background-color: ${style.backgroundColor};
-      border: ${style.border}
+      border: ${style.border};
     `;
   }}
 
   border-radius: 12px;
   font-size: 14px;
-  line-height: 38px;
+  height: 38px;
   line-height: 22px;
   letter-spacing: 0;
   cursor: pointer;
