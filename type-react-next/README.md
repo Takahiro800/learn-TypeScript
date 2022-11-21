@@ -1,5 +1,8 @@
 # TypeScriptとReact/Next.jsで作る実践Webアプリケーション開発
 
+## TODO
+- VSCode Remote Containerを使ってみる
+
 p.98~100
 - `useCallback`を使って関数をメモ化することで、値に変化があってもコンポーネントの再描画は起きない
 
@@ -30,6 +33,22 @@ export async function getStaticPaths() {
 		fallback: false // trueもしくは `blocking`を指定できる
 	}
 }
+```
+## 4.2.1 styled-componentsを導入
+```bash
+# yarn add styled-components
+npm install --save styled-components
+
+# yarn add --dev @types/styled-components
+npm install --save-dev @types/styled-components
+```
+- next.config.jsに設定を追加
+```js
+/** @type {import('next').NextConfig} */
+
+const nextConfig = {
+  reactStrictMode: true,
+};
 ```
 
 ## 4.3.1 Storybookの導入
