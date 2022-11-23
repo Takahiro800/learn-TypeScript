@@ -20,3 +20,13 @@ services:
     ports:
       - 6006:6006
     tty: true
+  jsonserver:
+    build: .
+    environment:
+      - NODE_ENV=development
+    volumes:
+      - ./:/usr/src/app
+    command: sh -c 'cd ts-nextbook-json && npm ci && npm start'
+    ports:
+      - 8000:8000
+    tty: true
