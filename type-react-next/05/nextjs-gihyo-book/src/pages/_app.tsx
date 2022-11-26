@@ -1,7 +1,7 @@
 // import '../styles/globals.css'
 import Head from 'next/head'
 // import { createGlobalStyle } from 'styled-components'
-import 'tailwindcss/tailwind.css'
+// import 'tailwindcss/tailwind.css'
 import type { AppProps } from 'next/app'
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
