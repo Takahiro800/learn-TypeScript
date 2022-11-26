@@ -13,6 +13,9 @@ module.exports = {
   ],
   theme: {
     extend: {},
+    borderRadius: {
+      half: '50%',
+    },
   },
   plugins: [],
 }
